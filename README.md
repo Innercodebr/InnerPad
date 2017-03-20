@@ -1,10 +1,12 @@
 # InnerPad
-A Simple Text editor that fit in your needs.
+## A Simple Text editor that fit in your needs.
 
 
-InnerPad Editor dont replace your primary IDE, but will hel you in some tasks likeÇ
+#### InnerPad Editor dont replace your primary IDE, but will help you in some tasks
 
-- Friendly Interface (like Visual Studio)
+###Features:
+
+- Friendly Interface with Sintax Hilight (like Visual Studio)
 - Chrome Webbrowser Integrated with Developer Tools.
 - Entire Webpage Capture.
 - E-mail Marketing Development (compile external CSS and Style tags into Inline CSS),
