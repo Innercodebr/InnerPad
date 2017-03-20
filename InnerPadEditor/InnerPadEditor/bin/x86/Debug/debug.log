@@ -1,0 +1,45 @@
+[0309/012136:WARNING:spdy_session.cc(2216)] Received HEADERS for invalid stream 1
+[0309/024457:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0309/024608:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0309/024744:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0309/025130:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0309/101353:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0309/101657:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0309/101838:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0309/101956:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0309/102208:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0309/105141:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0309/165813:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0310/002729:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0310/002730:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0310/002730:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0310/002730:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0310/002730:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0310/002731:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0310/002731:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0310/002743:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0310/011014:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0310/011539:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0310/011908:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0310/012512:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0310/104040:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0310/110857:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0310/112103:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0310/164322:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0310/164336:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0310/165105:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0310/182353:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0313/103417:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0314/142250:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0314/142458:ERROR:print_web_view_helper.cc(1269)] CopyMetafileDataToSharedMem failed
+[0314/142458:ERROR:print_web_view_helper.cc(1418)] CreatePreviewDocument failed
+[0314/144341:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0314/145442:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0314/145529:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0314/170252:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0314/170402:ERROR:print_web_view_helper.cc(1269)] CopyMetafileDataToSharedMem failed
+[0314/170402:ERROR:print_web_view_helper.cc(1418)] CreatePreviewDocument failed
+[0314/170802:ERROR:broker_win.cc(58)] Error reading broker pipe: O pipe foi finalizado. (0x6D)
+[0315/151629:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0315/164927:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0315/165004:ERROR:broker_win.cc(58)] Error reading broker pipe: O pipe foi finalizado. (0x6D)
