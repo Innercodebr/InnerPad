@@ -4,7 +4,7 @@
 
 #### InnerPad Editor dont replace your primary IDE, but will help you in some tasks
 
-###Features:
+### Features:
 
 - Friendly Interface with Sintax Hilight (like Visual Studio)
 - Chrome Webbrowser Integrated with Developer Tools.
