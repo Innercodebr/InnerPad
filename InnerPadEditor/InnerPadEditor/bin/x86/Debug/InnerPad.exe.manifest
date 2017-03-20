@@ -150,14 +150,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="InnerPad.exe" size="100264">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="InnerPad.exe" size="100776">
       <assemblyIdentity name="InnerPad" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>C0HpVTNZCjrf/rrP2Vq0wn/ErCH5nNdaDmerW1yA74g=</dsig:DigestValue>
+        <dsig:DigestValue>Vt8x/DwVvN+hzXuGega80Qv5HBlA/Vf+fGaqFotTMn0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
