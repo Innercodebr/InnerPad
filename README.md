@@ -14,4 +14,4 @@
 - E-mail Marketing Development (compile external CSS and Style tags into Inline CSS)
 - Send Email using SMTP
 - Runtime JavaScript Documentation using Github Styles
-- Write PDF files using Github Falvored Markdown or HTML with Runtime preview using Google Chrome Engine (CEFSharp).
+- Write PDF files using Github Flavored Markdown or HTML with Runtime preview using Google Chrome Engine (CEFSharp).
