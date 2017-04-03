@@ -90,6 +90,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Ciloci.Flee.dll" size="217088">
+      <assemblyIdentity name="Ciloci.Flee" version="0.9.26.0" publicKeyToken="C8526A021EF298ED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>N7/pZ+UeC6gLoUI7ODyMWcF2c9LONAJUb9bgwqXeRek=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ColorCode.dll" size="115712">
       <assemblyIdentity name="ColorCode" version="1.0.3.0" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -138,26 +150,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="InnerLibs.dll" size="398336">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="InnerLibs.dll" size="410112">
       <assemblyIdentity name="InnerLibs" version="1.0.4.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LfXD7mM84xJLrePFEMP7aUuUz4oT6OtoDbW7+SMo+eE=</dsig:DigestValue>
+        <dsig:DigestValue>GL9rmMI95o595S+flOiiL5FXjl8EaDMCnlcXGugUGgU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="InnerPad.exe" size="100264">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="InnerPad.exe" size="105384">
       <assemblyIdentity name="InnerPad" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>C0HpVTNZCjrf/rrP2Vq0wn/ErCH5nNdaDmerW1yA74g=</dsig:DigestValue>
+        <dsig:DigestValue>gePXHfcWpqtSVa9UCOU5UaAq4vDhUPZJUMV6isq26no=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -182,6 +194,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>4MtyVuiSqTk5n5DBS5+uZoEPwoTcbXmOLog633MPccY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="526336">
+      <assemblyIdentity name="Newtonsoft.Json" version="9.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>V14w+Y5OpCyeUW7ci7sprYtQsXOj5rNrW6OeEzzOlAY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -233,6 +257,105 @@
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="Images\Array.bmp" size="1334">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>uktcjAm5jBrQK1/GFkA0GefuKoLi74RtM5uiWAd5X6o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Boolean.jpg" size="1345">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Sm8m0MrRaNACNGg3I7JeYfixqRciRCLJHHvDtsRL7j4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Date.jpg" size="1358">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>jYRWE9SiIqAw+1NW2NDBAyyTjQ5QtR0Y+bmHY+lnetw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Float.jpg" size="1342">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Xkkin91cL/7zVC6WkTVmca8Zx6DXIPjSq8hG3Rh2YXE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Guid.jpg" size="1360">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+sJDoLj5VGZgz1oJVQeN3BlSD3oekMvEDK8xNyF/g9g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Integer.jpg" size="1369">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>7pcXRHnkgiNGopHx/Lwqj4SyR+tX7FMrncBLGiIOP4A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\None.jpg" size="1268">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/Hy+ffeYaW8jT/0UtK9Ez+AEIwwlIuCL/Bwn+t1TcIE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Null.jpg" size="1268">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/Hy+ffeYaW8jT/0UtK9Ez+AEIwwlIuCL/Bwn+t1TcIE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\Object.bmp" size="822">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>g3ajWVV/RkEHTCFhqDWGq4nlBZMuAW2TqVsgiCdPYy4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\String.jpg" size="1352">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>0Shn+jUdN0eO/0Q2dxUDyvv2mHSR6OD+QV0fg16OHLM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Images\TimeSpan.jpg" size="1358">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>jYRWE9SiIqAw+1NW2NDBAyyTjQ5QtR0Y+bmHY+lnetw=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="InnerPad.exe.config" size="541">
     <hash>
       <dsig:Transforms>
@@ -240,6 +363,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>DlK8OkbGVmgolkm+Rj9KNCA4CjxC9IkhU/rn+y5APLM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Type to color associations.txt" size="313">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>75TPNnNHn71y9rAh4UBaC8oinqhZXbrYwbCH+/gUE20=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

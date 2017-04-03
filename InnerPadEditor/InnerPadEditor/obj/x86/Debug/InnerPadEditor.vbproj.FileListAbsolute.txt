@@ -114,3 +114,8 @@ C:\SVN\InnerPad2\trunk\InnerPadEditor\InnerPadEditor\obj\x86\Debug\InnerPad.WebB
 C:\SVN\InnerPad2\trunk\InnerPadEditor\InnerPadEditor\obj\x86\Debug\InnerPadEditor.vbproj.GenerateResource.Cache
 C:\SVN\InnerPad2\trunk\InnerPadEditor\InnerPadEditor\obj\x86\Debug\InnerPad.exe.manifest
 C:\SVN\InnerPad2\trunk\InnerPadEditor\InnerPadEditor\obj\x86\Debug\InnerPad.application
+C:\SVN\InnerPad2\trunk\InnerPadEditor\InnerPadEditor\bin\x86\Debug\Ciloci.Flee.dll
+C:\SVN\InnerPad2\trunk\InnerPadEditor\InnerPadEditor\obj\x86\Debug\InnerPad.Console.resources
+C:\SVN\InnerPad2\trunk\InnerPadEditor\InnerPadEditor\bin\x86\Debug\Newtonsoft.Json.dll
+C:\SVN\InnerPad2\trunk\InnerPadEditor\InnerPadEditor\bin\x86\Debug\InnerLibs.pdb
+C:\SVN\InnerPad2\trunk\InnerPadEditor\InnerPadEditor\bin\x86\Debug\Newtonsoft.Json.xml

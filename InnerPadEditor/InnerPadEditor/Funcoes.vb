@@ -53,7 +53,7 @@ Module Publico
         doc.Append("<head>")
         doc.Append("<title>")
         Try
-            tit = a.GetTagContent("h1")
+            tit = a.GetElementsByTagName("h1").First.Content
             If a = tit Or tit.IsBlank() Then
                 tit = "New Document"
             End If
@@ -144,7 +144,7 @@ Module Publico
         Dim a As New ReverseMarkdown.Converter()
         Dim txt = ""
         Try
-            txt = HTML.GetTagContent("body")
+            txt = HTML.GetElementsByTagName("body").First.Content
         Catch
             txt = HTML
         End Try

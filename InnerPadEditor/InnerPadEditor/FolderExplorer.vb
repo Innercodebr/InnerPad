@@ -76,7 +76,7 @@ Public Class FolderExplorer
             For Each d In Me.ParentForm.MdiChildren
                 If d.GetType = GetType(DocumentForm) Then
                     Dim cd = CType(d, DocumentForm)
-                    If cd.FileName.FullName = file.FullName Then
+                    If Not IsNothing(cd.FileName) AndAlso cd.FileName.FullName = file.FullName Then
                         cd.Show(Me.ParentForm.GetAllControls(Of DockPanel).First, DockState.Document)
                         Exit Sub
                     End If

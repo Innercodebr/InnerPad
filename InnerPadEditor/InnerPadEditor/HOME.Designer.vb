@@ -67,6 +67,7 @@ Partial Class HOME
         Me.ToolStripSeparator13 = New System.Windows.Forms.ToolStripSeparator()
         Me.closeall_bt = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
+        Me.AJAXConsoleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -341,7 +342,7 @@ Partial Class HOME
         '
         'ToolStripDropDownButton2
         '
-        Me.ToolStripDropDownButton2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.newbrowser_bt, Me.folderexplorer_bt, Me.ToolStripSeparator13, Me.closeall_bt, Me.ToolStripSeparator14})
+        Me.ToolStripDropDownButton2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.newbrowser_bt, Me.AJAXConsoleToolStripMenuItem, Me.folderexplorer_bt, Me.ToolStripSeparator13, Me.closeall_bt, Me.ToolStripSeparator14})
         Me.ToolStripDropDownButton2.ForeColor = System.Drawing.Color.Orange
         Me.ToolStripDropDownButton2.Name = "ToolStripDropDownButton2"
         Me.ToolStripDropDownButton2.ShowDropDownArrow = False
@@ -380,6 +381,13 @@ Partial Class HOME
         '
         Me.ToolStripSeparator14.Name = "ToolStripSeparator14"
         Me.ToolStripSeparator14.Size = New System.Drawing.Size(308, 6)
+        '
+        'AJAXConsoleToolStripMenuItem
+        '
+        Me.AJAXConsoleToolStripMenuItem.Name = "AJAXConsoleToolStripMenuItem"
+        Me.AJAXConsoleToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
+        Me.AJAXConsoleToolStripMenuItem.Size = New System.Drawing.Size(311, 26)
+        Me.AJAXConsoleToolStripMenuItem.Text = "AJAX &Console"
         '
         'HOME
         '
@@ -442,4 +450,5 @@ Partial Class HOME
     Friend WithEvents paste_bt As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator18 As ToolStripSeparator
     Friend WithEvents selectall_bt As ToolStripMenuItem
+    Friend WithEvents AJAXConsoleToolStripMenuItem As ToolStripMenuItem
 End Class

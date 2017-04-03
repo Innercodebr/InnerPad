@@ -269,7 +269,7 @@ InnerLibs
  <param name="Name"></param>
  <returns></returns>
 </member>
-<member name="M:InnerLibs.BrowserClipper.Capture(System.String)">
+<member name="M:InnerLibs.BrowserClipper.Capture(System.String,System.Int32)">
  <summary>
  Cria um snapshot de uma pagina da web a partir de uma URL
  </summary>
@@ -293,6 +293,13 @@ InnerLibs
  Traz uma Lista com todas as propriedades de um objeto
  </summary>
  <param name="MyObject">Objeto</param>
+ <returns></returns>
+</member>
+<member name="M:InnerLibs.ClassManager.GetValues``1">
+ <summary>
+ Traz todos os Valores de uma enumeração
+ </summary>
+ <typeparam name="T"></typeparam>
  <returns></returns>
 </member>
 <member name="M:InnerLibs.ClassManager.IsIn``1(``0,System.Collections.Generic.IEnumerable{``0})">
@@ -1012,26 +1019,54 @@ InnerLibs
  <param name="Request">Request GET ou POST</param>
  <returns></returns>
 </member>
-<member name="P:InnerLibs.DataBase`1.ConnectionString">
+<member name="P:InnerLibs.DataBase.ConnectionString">
  <summary>
  Conexão genérica (Oracle, MySQL, SQLServer etc.)
  </summary>
  <returns></returns>
 </member>
-<member name="M:InnerLibs.DataBase`1.#ctor(System.String)">
+<member name="P:InnerLibs.DataBase.ConnectionType">
  <summary>
- Cria uma nova instancia de Banco de Dados baseada em uma ConnectionString
+ Tipo da conexão
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:InnerLibs.DataBase.#ctor(System.Type,System.String)">
+ <summary>
+ Cria uma nova instancia de Banco de Dados baseada em uma ConnectionString e em um Tipo de Conexão
  </summary>
  <param name="ConnectionString">String de conexão com o banco</param>
+ <param name="Type">Tipo de conexão com o banco</param>
 </member>
-<member name="M:InnerLibs.DataBase`1.RunSQL(System.String)">
+<member name="M:InnerLibs.DataBase.Create``1(System.String)">
+ <summary>
+ Cria uma nova instancia de Banco de Dados baseada em uma ConnectionString e em um Tipo de Conexão
+ </summary>
+ <param name="ConnectionString">String de conexão com o banco</param>
+ <typeparam name="ConnectionType">Tipo de conexão com o banco</typeparam>
+</member>
+<member name="M:InnerLibs.DataBase.RunSQL(System.String)">
  <summary>
  Executa uma Query no banco. Recomenda-se o uso de procedures.
  </summary>
  <param name="SQLQuery">Comando SQL a ser executado</param>
  <returns>Um DataReader com as informações da consulta</returns>
 </member>
-<member name="M:InnerLibs.DataBase`1.RunProcedureForEach(System.String,System.String,System.String,System.Collections.Specialized.NameValueCollection,System.String[])">
+<member name="M:InnerLibs.DataBase.RunSQL(System.IO.FileInfo)">
+ <summary>
+ Executa uma Query no banco partir de um Arquivo.
+ </summary>
+ <param name="File">Arquivo com o comando SQL a ser executado</param>
+ <returns>Um DataReader com as informações da consulta</returns>
+</member>
+<member name="M:InnerLibs.DataBase.RunSQL(System.Web.HttpPostedFile)">
+ <summary>
+ Executa uma Query no banco partir de um Arquivo.
+ </summary>
+ <param name="File">Arquivo com o comando SQL a ser executado</param>
+ <returns>Um DataReader com as informações da consulta</returns>
+</member>
+<member name="M:InnerLibs.DataBase.RunProcedureForEach(System.String,System.String,System.String,System.Collections.Specialized.NameValueCollection,System.String[])">
  <summary>
  Executa uma procedure para cada item dentro de uma coleção
  </summary>
@@ -1041,7 +1076,22 @@ InnerLibs
  <param name="Items">Coleçao de valores que serão inseridos em cada iteraçao</param>
  <param name="Keys">as chaves de cada item</param>
 </member>
-<member name="M:InnerLibs.DataBase`1.RunSQL(System.String,System.String,System.Byte[])">
+<member name="M:InnerLibs.DataBase.RunBatchProcedure(InnerLibs.BatchProcedure)">
+ <summary>
+ Executa uma série de procedures baseando-se eum uma unica chave estrangeira
+ </summary>
+ <param name="BatchProcedure">Configuraçoes das procedures</param>
+</member>
+<member name="M:InnerLibs.DataBase.RunBatchProcedure(System.Collections.Specialized.NameValueCollection,System.String,System.String,InnerLibs.ProcedureConfig[])">
+ <summary>
+ Executa uma série de procedures baseando-se eum uma unica chave estrangeira
+ </summary>
+ <param name="ForeignKey">Coluna que representa a chave estrangeira da tabela</param>
+ <param name="ForeignValue">Valor que será guardado como chave estrangeira</param>
+ <param name="Items">Coleçao de valores que serão inseridos em cada iteraçao</param>
+ <param name="ProcedureConfig">Informaçoes sobre qual procedure será executada e quais keys deverão ser usadas como parametros</param>
+</member>
+<member name="M:InnerLibs.DataBase.RunSQL(System.String,System.String,System.Byte[])">
  <summary>
  Executa uma Query no banco com upload de arquivos.
  </summary>
@@ -1050,7 +1100,7 @@ InnerLibs
  <param name="File">Arquivo</param>
  <returns>Um DataReader com as informações da consulta</returns>
 </member>
-<member name="M:InnerLibs.DataBase`1.RunSQL(System.String,System.String,System.Web.HttpPostedFile)">
+<member name="M:InnerLibs.DataBase.RunSQL(System.String,System.String,System.Web.HttpPostedFile)">
  <summary>
  Executa uma Query no banco com upload de arquivos.
  </summary>
@@ -1059,7 +1109,7 @@ InnerLibs
  <param name="File">Arquivo postado</param>
  <returns>Um DataReader com as informações da consulta</returns>
 </member>
-<member name="M:InnerLibs.DataBase`1.RunSQL(System.String,System.String,System.IO.FileInfo)">
+<member name="M:InnerLibs.DataBase.RunSQL(System.String,System.String,System.IO.FileInfo)">
  <summary>
  Executa uma Query no banco com upload de arquivos.
  </summary>
@@ -1068,14 +1118,14 @@ InnerLibs
  <param name="File">Arquivo</param>
  <returns>Um DataReader com as informações da consulta</returns>
 </member>
-<member name="M:InnerLibs.DataBase`1.RunSQL(System.Data.Common.DbCommand)">
+<member name="M:InnerLibs.DataBase.RunSQL(System.Data.Common.DbCommand)">
  <summary>
  Executa uma Query no banco. Recomenda-se o uso de procedures.
  </summary>
  <param name="Command">Commando de banco de dados pre-pronto</param>
  <returns></returns>
 </member>
-<member name="M:InnerLibs.DataBase`1.RunSQL(System.String,System.Data.Common.DbParameter[])">
+<member name="M:InnerLibs.DataBase.RunSQL(System.String,System.Data.Common.DbParameter[])">
  <summary>
  Executa uma Query no banco. Recomenda-se o uso de procedures.
  </summary>
@@ -1083,7 +1133,7 @@ InnerLibs
  <param name="Parameters">Parametros que serão adicionados ao comando</param>
  <returns>Um DataReader com as informações da consulta</returns> 
 </member>
-<member name="M:InnerLibs.DataBase`1.RunSQL(InnerLibs.TableQuickConnector,InnerLibs.TableQuickConnector.Action,System.String)">
+<member name="M:InnerLibs.DataBase.RunSQL(InnerLibs.TableQuickConnector,InnerLibs.TableQuickConnector.Action,System.String)">
  <summary>
  Executa uma Query no banco usando como base um TableQuickConnector
  </summary>
@@ -1091,11 +1141,50 @@ InnerLibs
  <param name="Action">Açao que será realizada no banco</param>
  <param name="WhereConditions">Condições WHERE</param>
  <returns></returns>
- 
+</member>
+<member name="M:InnerLibs.DataBase.RunSQL``1(System.String,``0)">
+ <summary>
+ Executa uma Query no banco usando como base um TableQuickConnector
+ </summary>
+ <typeparam name="Type">Tipo da Classe</typeparam>
+ <param name="SQLQuery">Comando SQL parametrizado a ser executado</param>
+ <param name="[Object]">Objeto de onde serão extraidos os parâmetros e valores</param>
+ <returns></returns>
+</member>
+<member name="M:InnerLibs.DataBase.SELECT``1(System.String,``0@,System.String)">
+ <summary>
+ Insere um objeto em uma tabela a partir de suas propriedades e valores
+ </summary>
+ <typeparam name="Type">Tipo do Objeto</typeparam>
+ <param name="TableName">Nome da tabela</param>
+ <param name="[Object]">Objeto onde</param>
+</member>
+<member name="M:InnerLibs.DataBase.INSERT``1(System.String,``0)">
+ <summary>
+ Insere um objeto em uma tabela a partir de suas propriedades e valores
+ </summary>
+ <typeparam name="Type">Tipo do Objeto</typeparam>
+ <param name="TableName"></param>
+ <param name="[Object]"></param>
+</member>
+<member name="M:InnerLibs.DataBase.UPDATE``1(System.String,``0,System.String)">
+ <summary>
+ Atualiza um registro de uma tabela usando um Objeto
+ </summary>
+ <param name="TableName">Nome da Tabela</param>
+ <param name="WhereConditions">Condições após a clausula WHERE</param>
+ <param name="Object">Objeto com os valores que serão atualizados</param>
+</member>
+<member name="M:InnerLibs.DataBase.DELETE(System.String,System.String)">
+ <summary>
+ Deleta um registro de uma tabela
+ </summary>
+ <param name="TableName">Nome da Tabela</param>
+ <param name="WhereConditions">Condições após a clausula WHERE</param>
 </member>
 <member name="T:InnerLibs.TableQuickConnector">
  <summary>
- Classe utilizada para intergligar os campos de um formulário a uma tabela no banco de dados
+ Classe utilizada para interligar os campos de um formulário a uma tabela no banco de dados
  </summary>
 </member>
 <member name="T:InnerLibs.TableQuickConnector.Action">
@@ -1181,6 +1270,15 @@ InnerLibs
  <param name="Reader">DataReader</param>
  <param name="TextColumn">Coluna que será usada como Texto do elemento option</param>
  <param name="ValueColumn">Coluna que será usada como Value do elemento option</param>
+ <returns></returns>
+</member>
+<member name="M:InnerLibs.DataManipulation.GetColumnValue``1(System.Data.Common.DbDataReader,System.String)">
+ <summary>
+ Retorna o valor de uma coluna especifica da primeira linha do primeiro resultado de um DataReader
+ </summary>
+ <typeparam name="Type">Tipo para qual o valor será convertido</typeparam>
+ <param name="Reader">Reader</param>
+ <param name="Column">Coluna</param>
  <returns></returns>
 </member>
 <member name="M:InnerLibs.DataManipulation.ToDictionary``2(System.Data.Common.DbDataReader,System.String,System.String)">
@@ -1309,11 +1407,11 @@ InnerLibs
 </member>
 <member name="M:InnerLibs.DataManipulation.ToItem``1(System.Data.Common.DbDataReader,System.Int32)">
  <summary>
- Pega o primeiro item do resultado correspondente e serializa em um objeto especifico
+ Pega o primeiro item (linha) do resultado e serializa em um objeto especifico
  </summary>
- <typeparam name="Type"></typeparam>
+ <typeparam name="Type">Tipo de objeto</typeparam>
  <param name="Reader">DataReader</param>
- <param name="ResultIndex"></param>
+ <param name="ResultIndex">Index do resultset que será serializado (normalmente 0)</param>
  <returns></returns>
 </member>
 <member name="M:InnerLibs.DataManipulation.ToDictionary(System.Data.Common.DbDataReader)">
@@ -1325,11 +1423,10 @@ InnerLibs
 </member>
 <member name="M:InnerLibs.DataManipulation.ToDictionary(System.Data.Common.DbDataReader,System.Int32)">
  <summary>
- Converte um DataReader para uma Lista de dicionario
+ Converte um DataReader para uma Lista de Dicionarios
  </summary>
  <param name="Reader">DataReader</param>
  <param name="ResultIndex">Indice de resultado</param>
- <returns>String JSON</returns>
 </member>
 <member name="M:InnerLibs.DataManipulation.ToMarkdown(System.Data.Common.DbDataReader)">
  <summary>
@@ -1412,6 +1509,75 @@ InnerLibs
  <param name="File">Arquivo postado</param>
  <returns></returns>
 </member>
+<member name="T:InnerLibs.BatchProcedure">
+ <summary>
+ Conjunto de configuraçoes de procedures para ser executado em sequencia
+ </summary>
+</member>
+<member name="P:InnerLibs.BatchProcedure.Errors">
+ <summary>
+ Erros enxontrados ao executar procedures
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:InnerLibs.BatchProcedure.ForeignKey">
+ <summary>
+ Coluna de chave estrangeira
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:InnerLibs.BatchProcedure.ForeignValue">
+ <summary>
+ Valor da chave estrangeira
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:InnerLibs.BatchProcedure.Items">
+ <summary>
+ Items usados na iteraçao
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:InnerLibs.BatchProcedure.Add(System.String,System.String[])">
+ <summary>
+ Adciona uma procedure a execuçao atual
+ </summary>
+ <param name="ProcedureName">Nome da procedure</param>
+ <param name="Keys">Chaves que serão utilizadas como parâmetro da procedure</param>
+</member>
+<member name="M:InnerLibs.BatchProcedure.#ctor(System.Collections.Specialized.NameValueCollection,System.String,System.String,InnerLibs.ProcedureConfig[])">
+ <summary>
+ Cria uma nova lista de procedures
+ </summary>
+ <param name="Items">Items usados em cada iteração</param>
+ <param name="ForeignKey">Coluna de chave estrangeira</param>
+ <param name="ForeignValue">Valor da coluna d chave estrangeira</param>
+ <param name="Procs">Lista contendo as configurações de cada procedure</param>
+</member>
+<member name="T:InnerLibs.ProcedureConfig">
+ <summary>
+ Configuração de procedure para a classe <see cref="T:InnerLibs.BatchProcedure"/>
+ </summary>
+</member>
+<member name="P:InnerLibs.ProcedureConfig.ProcedureName">
+ <summary>
+ Nome da Procedure
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:InnerLibs.ProcedureConfig.Keys">
+ <summary>
+ Chaves usadas como parametros da procedure
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:InnerLibs.ProcedureConfig.#ctor(System.String,System.String[])">
+ <summary>
+ Cria uma nova configuração de procedure
+ </summary>
+ <param name="ProcedureName">Nome da Procedure</param>
+ <param name="Keys">Chaves usadas como parametros da procedure</param>
+</member>
 <member name="T:InnerLibs.GeoIP">
  <summary>
  Retorna a localizaçao de um IP
@@ -1454,6 +1620,51 @@ InnerLibs
  </summary>
  <param name="EncryptedText">Texto Criptografado</param>
  <returns></returns>
+</member>
+<member name="T:InnerLibs.Templatizer.TemplateBuilder">
+ <summary>
+ Gera HTML dinâmico a partir de uma conexão com banco de dados e um template HTML
+ </summary>
+</member>
+<member name="M:InnerLibs.Templatizer.TemplateBuilder.#ctor(InnerLibs.DataBase,System.IO.DirectoryInfo)">
+ <summary>
+ Instancia um Novo TemplateBuilder utilizando uma Pasta para guardar os templates
+ </summary>
+ <param name="DataBase">Conexão com o banco de dados</param>
+ <param name="TemplateFolder">Pasta com os arquivos HTML dos templates</param>
+</member>
+<member name="M:InnerLibs.Templatizer.TemplateBuilder.#ctor(InnerLibs.DataBase,System.Reflection.Assembly)">
+ <summary>
+ Instancia um Novo TemplateBuilder
+ </summary>
+ <param name="DataBase">Conexão com o banco de dados</param>
+ <param name="ApplicationAssembly">Assembly da aplicação onde os arquivos HTML dos templates estão compilados</param>
+</member>
+<member name="P:InnerLibs.Templatizer.TemplateBuilder.DataBase">
+ <summary>
+ Conexão genérica de Banco de Dados
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:InnerLibs.Templatizer.TemplateBuilder.TemplateFolder">
+ <summary>
+ Pasta contendo os arquivos HTML utilizados como template
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:InnerLibs.Templatizer.TemplateBuilder.ApplicationAssembly">
+ <summary>
+ Aplicaçao contendo os Resources (arquivos compilados internamente) dos aruqivos HTML utilziados como template
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:InnerLibs.Templatizer.TemplateBuilder.Build(System.String,System.String)">
+ <summary>
+ Processa os comandos SQL e retorna o resultado em HTML utilizando o arquivo de template especificado
+ </summary>
+ <param name="SQLQuery">Comando SQL</param>
+ <param name="TemplateFile">Arquivo do Template</param>
+ <returns></returns>    
 </member>
 <member name="T:InnerLibs.LimitedCollection`1">
  <summary>
@@ -1582,6 +1793,13 @@ InnerLibs
  <typeparam name="TValue">Tipo do Valor</typeparam>
  <param name="Box">ListBox</param>
  <param name="Source">Lista</param>
+</member>
+<member name="M:InnerLibs.SQLExplorer.SQLExplorer.SQLDir(System.String)">
+ <summary>
+ Busca arquivos em um diretório utilizando SQL
+ </summary>
+ <param name="SQLQuery">Comando SQL</param>
+ <returns>Uma Lista com todos os caminhos Encontrados</returns>
 </member>
 <member name="T:InnerLibs.TimeMachine.TimeFlow">
  <summary>
@@ -2034,7 +2252,14 @@ InnerLibs
  Cria um diretório se o mesmo nao existir e retorna um DirectoryInfo deste diretório
  </summary>
  <param name="DirectoryName">o nome(s) do(s) diretorio(s) Ex.: "dir1/dir2/dir3" </param>
- <returns>Uma DirectoryInfo contendo as informacoes do diretório criado</returns>
+ <returns>Um DirectoryInfo contendo as informacoes do diretório criado</returns>
+</member>
+<member name="M:InnerLibs.Directories.ToFile(System.String,InnerLibs.FileType)">
+ <summary>
+ Cria um arquivo em branco se o mesmo nao existir e retorna um Fileinfo deste arquivo
+ </summary>
+ <param name="FileName">o nome do arquivo Ex.: "dir1/dir2/dir3/file.txt" </param>
+ <returns>Um FileInfo contendo as informacoes do arquivo criado</returns>
 </member>
 <member name="M:InnerLibs.Directories.ToZipFile(System.IO.DirectoryInfo,System.String,System.IO.Compression.CompressionLevel)">
  <summary>
@@ -2059,6 +2284,15 @@ InnerLibs
 <member name="M:InnerLibs.Directories.Search(System.IO.DirectoryInfo,System.IO.SearchOption,System.String[])">
  <summary>
  Retorna uma lista de arquivos baseado em um ou mais padrões de pesquisas
+ </summary>
+ <param name="Directory">Diretório</param>
+ <param name="SearchOption">Especifica se a pesquisa ocorrerá apenas no diretório ou em todos os subdiretórios também</param>
+ <param name="Searches">Padrões de pesquisa (*.txt, arquivo.*, *)</param>
+ <returns></returns>
+</member>
+<member name="M:InnerLibs.Directories.SearchDirectories(System.IO.DirectoryInfo,System.IO.SearchOption,System.String[])">
+ <summary>
+ Retorna uma lista de diretórios baseado em um ou mais padrões de pesquisas
  </summary>
  <param name="Directory">Diretório</param>
  <param name="SearchOption">Especifica se a pesquisa ocorrerá apenas no diretório ou em todos os subdiretórios também</param>
@@ -2578,9 +2812,9 @@ InnerLibs
 </member>
 <member name="P:InnerLibs.GoogleMaps.Map.ScriptTag">
  <summary>
- Tag Script contendo a URL da Api
+ Tag Script contendo a URL da Api no SRC (Adicione no Header ou Body)
  </summary>
- <returns>uma string contendo a tag com a URL da API. Adicione no Header ou Body</returns>
+ <returns>uma string contendo a tag com a URL da API.</returns>
 </member>
 <member name="T:InnerLibs.GoogleMaps.Map.Marker">
  <summary>
@@ -2660,6 +2894,19 @@ InnerLibs
  Modulo de Imagem
  </summary>
  <remarks></remarks>
+ 
+</member>
+<member name="M:InnerLibs.Images.DrawImage(System.String,System.Int32,System.Int32,System.Drawing.Font,System.Nullable{System.Drawing.Color},System.Nullable{System.Drawing.Color})">
+ <summary>
+ Escreve uma string em uma imagem
+ </summary>
+ <param name="Text">Texto</param>
+ <param name="Width">Largura da imagem</param>
+ <param name="Height">Altura da imagem</param>
+ <param name="Font">Fonte que será usada</param>
+ <param name="TextColor">Cor do texto</param>
+ <param name="BackColor">Cor de fundo</param>
+ <returns></returns>
 </member>
 <member name="M:InnerLibs.Images.Resize(System.Drawing.Image,System.Int32,System.Int32,System.Boolean)">
  <summary>
@@ -2789,93 +3036,6 @@ InnerLibs
  </summary>
  <param name="Title">Titulo do Menu</param>
  <param name="SubItems">Subitens do menu</param>
-</member>
-<member name="T:InnerLibs.JsonFile`1">
- <summary>
- Cria um arquivo JSON no diretório especificado utilizando qualquer classe como base para a estrutura  do arquivo
- </summary>
- <typeparam name="Type">Classe base para a estrutura</typeparam>
-</member>
-<member name="M:InnerLibs.JsonFile`1.#ctor(System.String,`0)">
- <summary>
- Cria um arquivo JSON no diretório especificado utilizando qualquer classe como base para a estrutura  do arquivo
- </summary>
- <param name="Path">Caminho do arquivo</param>
- <param name="Content">Classe base para a estrutura e conteúdo dos arquivo</param>
-</member>
-<member name="M:InnerLibs.JsonFile`1.Save">
- <summary>
- Salva o conteúdo da classe (propriedade CONTENT) no arquivo JSON especificado na propriedade PATH
- </summary>
- <returns>Um fileInfo com as informações do arquivo salvo</returns>
-</member>
-<member name="M:InnerLibs.JsonFile`1.Load">
- <summary>
- Carrega o conteúdo do arquivo especificado na propriedade PATH dentro da classe (propriedade CONTENT)
- </summary>
- <returns>Um fileInfo com as informações do arquivo carregado</returns>
-</member>
-<member name="M:InnerLibs.JsonFile`1.LoadInto``1(``0@)">
- <summary>
- Carrega o conteudo do arquivo JSON em uma outra classe diretamente
- </summary>
- <typeparam name="NewType">Classe</typeparam>
- <param name="[Object]">Objeto</param>
-</member>
-<member name="M:InnerLibs.JsonFile`1.Delete">
- <summary>
- Apaga o arquivo especificado na propriedade PATH
- </summary>
- <returns>TRUE se a operação for um sucesso, caso contrário FALSE</returns>
-</member>
-<member name="M:InnerLibs.JsonFile`1.HasContent">
- <summary>
- Verifica se existe conteudo dentro das propriedades de CONTENT
- </summary>
- <returns>TRUE se alguma propriedade tiver algum conteúdo, caso contrário FALSE</returns>
-</member>
-<member name="M:InnerLibs.JsonFile`1.ClearContent">
- <summary>
- Limpa  o conteúdo de todas as propriedades da classe (propriedade CONTENT)
- </summary>
-</member>
-<member name="M:InnerLibs.JsonFile`1.DestroyContent">
- <summary>
- Remove a instância da classe (propriedade CONTENT)
- </summary>
-</member>
-<member name="T:InnerLibs.JsonFolder">
- <summary>
- Cria um diretório preparado para receber varios JsonFiles
- </summary>
-</member>
-<member name="M:InnerLibs.JsonFolder.#ctor(System.IO.DirectoryInfo)">
- <summary>
- Instancia o diretório e carrega os JsonFiles se existirem
- </summary>
- <param name="Directory">DirectoryInfo onde serão salvos sos arquivos JSON</param>
-</member>
-<member name="M:InnerLibs.JsonFolder.Add(System.Object,System.String)">
- <summary>
- Adiciona um JsonFile ao JsonFolder dentro da pasta da classe
- </summary>
- <param name="JsonContentClass">Classe que será adicionada a propriedade CONTENT do JsonFile</param>
- <param name="Filename">Nome do Arquivo</param>
-</member>
-<member name="M:InnerLibs.JsonFolder.SaveAll">
- <summary>
- Salva todos os arquivos Json nos diretórios especificados
- </summary>
-</member>
-<member name="M:InnerLibs.JsonFolder.Search``1(System.String,System.String,System.Boolean)">
- <summary>
- Realiza uma busca dentro dos arquivos json
- </summary>
- <typeparam name="Type">Tipo de classe que será buscado (define o diretório onde a busca será realizada)</typeparam>
- <param name="PropertyName">Propriedade da classe definida no parametro TYPE onde será realizada a busca. Deixar em branco pesquisa em todas as propriedades da classe</param>
- <param name="Value">Valor que será buscando dentro da propriedade JSON</param>
- <param name="IdenticalValue">Se TRUE, traz apenas os JsonFiles que possuêm valores idênticos ao parametro VALUE, caso contrário, traz os JsonFiles que possuirem o parâmetro VALUE como uma parte de seu valores. Padrão FALSE </param>
- <returns>Uma Lista de JsonFiles encontrados com os critérios acima</returns>
 </member>
 <member name="T:InnerLibs.Location">
  <summary>
@@ -3321,15 +3481,9 @@ InnerLibs
  </summary>
  <returns></returns>
 </member>
-<member name="M:InnerLibs.FileType.GetFileTypeExtensionList">
- <summary>
- Retorna uma lista com todas as extensões que possuem representação em MIME Type
- </summary>
- <returns></returns>
-</member>
 <member name="M:InnerLibs.FileType.GetExtensions(System.String)">
  <summary>
- Traz a primeira extensão compatível com o MIME type especificado
+ Traz uma lista de extensões de acordo com o  MIME type especificado
  </summary>
  <param name="MIME">MIME Type String</param>
  <returns></returns>
@@ -3348,19 +3502,19 @@ InnerLibs
 </member>
 <member name="M:InnerLibs.FileType.#ctor(System.IO.FileInfo)">
  <summary>
- Constroi um MIME Type a partir de um Arquivo (FileInfo)
+ Constroi um File Type a partir de um Arquivo (FileInfo)
  </summary>
  <param name="File">Fileinfo com o Arquivo</param>
 </member>
 <member name="M:InnerLibs.FileType.#ctor(System.String)">
  <summary>
- Constroi um MIME Type a partir da extensão de um Arquivo
+ Constroi um File Type a partir da extensão ou MIME Type de um Arquivo
  </summary>
  <param name="MimeTypeOrExtension">Extensão do arquivo</param>
 </member>
 <member name="M:InnerLibs.FileType.ToString">
  <summary>
- Retorna uma string que representa o Mime Type
+ Retorna uma string com o primeiro MIME TYPE do arquivo
  </summary>
  <returns></returns>
 </member>
@@ -4117,6 +4271,20 @@ InnerLibs
  <param name="URL">URL</param>
  <returns>nome do dominio</returns>
 </member>
+<member name="M:InnerLibs.Text.GetRelativeURL(System.Uri)">
+ <summary>
+ Retorna o caminho relativo da url
+ </summary>
+ <param name="URL">Url</param>
+ <returns></returns>
+</member>
+<member name="M:InnerLibs.Text.GetRelativeURL(System.String)">
+ <summary>
+ Retorna o caminho relativo da url
+ </summary>
+ <param name="URL">Url</param>
+ <returns></returns>
+</member>
 <member name="M:InnerLibs.Text.GetDomain(System.String)">
  <summary>
  Pega o dominio principal de uma URL
@@ -4470,6 +4638,14 @@ InnerLibs
  <param name="Text">string HTML</param>
  <returns>String HTML corrigido</returns> 
 </member>
+<member name="M:InnerLibs.Text.GetElementsByTagName(System.String,System.String)">
+ <summary>
+ Procura uma tag especifica em uma string htm e a converte para uma HTMLTag
+ </summary>
+ <param name="HTMLText">String HTML</param>
+ <param name="TagName">Nome da tag</param>
+ <returns></returns>
+</member>
 <member name="M:InnerLibs.Text.GetBetween(System.String,System.String,System.String)">
  <summary>
  Retorna o texto entre dois textos
@@ -4529,28 +4705,6 @@ InnerLibs
  <param name="ComparisonType">Tipo de comparacao</param>
  <returns>True se conter algum valor, false se não</returns>
 </member>
-<member name="M:InnerLibs.Text.GetWords(System.String,System.String)">
- <summary>
- Retorna um Array com todas as palavras de uma frase
- </summary>
- <param name="Text">String com a frase</param>
- <param name="Delimiter">Delimitador da frase, por padrão é espaço (" ")</param>
- <returns>Um array de Strings com as palavras</returns>
-</member>
-<member name="M:InnerLibs.Text.GetLast(System.String[])">
- <summary>
- Traz o ultimo elemento de um Array
- </summary>
- <param name="Words">Array de Strings</param>
- <returns>Uma string</returns>
-</member>
-<member name="M:InnerLibs.Text.GetFirst(System.String[])">
- <summary>
- Traz o primeiro elemento de um Array
- </summary>
- <param name="Words">Array de Strings</param>
- <returns>Uma string</returns>
-</member>
 <member name="M:InnerLibs.Text.IsAnagramOf(System.String,System.String)">
  <summary>
  Verifica se uma palavra é um Anagrama de outra palavra
@@ -4595,9 +4749,9 @@ InnerLibs
  <param name="Text">Texto</param>
  <returns></returns>
 </member>
-<member name="F:InnerLibs.NotificationForm.VisibleNotifications">
+<member name="P:InnerLibs.NotificationForm.VisibleNotifications">
  <summary>
- The list of currently open NotificationForms.
+ Lista com as notificações abertas
  </summary>
 </member>
 <member name="F:InnerLibs.NotificationForm.allowFocus">
@@ -4634,16 +4788,12 @@ InnerLibs
  True if the window was focused; False otherwise.
  </returns>
 </member>
-<member name="M:InnerLibs.NotificationForm.DestroyNotifications">
- <summary>
- Destroi todas as notificações criadas na aplicação.
- </summary>
-</member>
-<member name="M:InnerLibs.NotificationForm.#ctor(System.EventHandler@)">
+<member name="M:InnerLibs.NotificationForm.#ctor(System.EventHandler@,System.Boolean)">
  <summary>
  Cria uma Nova Notificação
  </summary>
  <param name="Action">Ação disparada no clique do botão OK</param>
+ <param name="ShowInputBox">Mostra ou esconde a InputBox</param> 
 </member>
 <member name="P:InnerLibs.NotificationForm.TextAlign">
  <summary>
@@ -4654,6 +4804,24 @@ InnerLibs
 <member name="P:InnerLibs.NotificationForm.OKButtonText">
  <summary>
  Texto do Botão OK
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:InnerLibs.NotificationForm.InputBoxText">
+ <summary>
+ Texto da caixa de input
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:InnerLibs.NotificationForm.ShowInputBox">
+ <summary>
+ Exibe uma caixa de texto na notificação para entrada de informações
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:InnerLibs.NotificationForm.InputBoxAutoComplete">
+ <summary>
+ Coleção de strings para o AutoCompletar do InputBox
  </summary>
  <returns></returns>
 </member>
@@ -4687,10 +4855,17 @@ InnerLibs
  </summary>
  <returns></returns>
 </member>
+<member name="M:InnerLibs.NotificationForm.DestroyNotifications">
+ <summary>
+ Destroi todas as notificações criadas na aplicação.
+ </summary>
+</member>
 <member name="M:InnerLibs.NotificationForm.Show(System.Int32,System.Boolean)">
  <summary>
  Exibe a notificação
  </summary>
+ <param name="Seconds">Tempo que a notificação ficará na tela</param>
+ <param name="ShowRemainTime">Exibe o contador na notificação</param>
 </member>
 <member name="T:InnerLibs.Toggles">
  <summary>
@@ -5144,11 +5319,16 @@ Atualiza a lista de keys
  </summary>
  <returns></returns>
 </member>
-<member name="M:InnerLibs.AJAX.Response.ToJSON">
+<member name="P:InnerLibs.AJAX.Response.timeout">
  <summary>
- Retorna um JSON deste objeto
+ Tempo que a API demora para responder (calculado automaticamente no metodo <see cref="M:InnerLibs.AJAX.Response.ToJSON"/>)
  </summary>
  <returns></returns>
+</member>
+<member name="M:InnerLibs.AJAX.Response.ToJSON">
+ <summary>
+ Processa a resposta e retorna um JSON deste objeto
+ </summary>
 </member>
 <member name="T:InnerLibs.Web">
  <summary>
@@ -5351,6 +5531,48 @@ Atualiza a lista de keys
  <param name="Url">Url</param>
  <returns>False para site fora do Ar</returns>
 </member>
+<member name="T:InnerLibs.HtmlTag">
+ <summary>
+ Estrutura de uma TAG HTML
+ </summary>
+</member>
+<member name="P:InnerLibs.HtmlTag.OriginalTagString">
+ <summary>
+ String que originou essa classe
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:InnerLibs.HtmlTag.TagName">
+ <summary>
+ Nome da Tag
+ </summary>
+ <returns></returns>
+ 
+</member>
+<member name="P:InnerLibs.HtmlTag.Attributes">
+ <summary>
+ Atributos da Tag
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:InnerLibs.HtmlTag.Content">
+ <summary>
+ Conteudo da Tag
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:InnerLibs.HtmlTag.ToString">
+ <summary>
+ Retorna a string da tag
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:InnerLibs.HtmlTag.#ctor(System.String)">
+ <summary>
+ Cria uma HtmlTagInfo a partir de uma String
+ </summary>
+ <param name="TagString">String contendo a tag</param>
+</member>
 <member name="T:InnerLibs.WinForms">
  <summary>
  Módulo de controle de formulários
@@ -5457,12 +5679,12 @@ Atualiza a lista de keys
  <param name="Control">Controle Pai</param>
  <returns>Uma lista com os controles</returns>
 </member>
-<member name="M:InnerLibs.WinForms.SetQueryableValue(System.Object@,System.Object)">
+<member name="M:InnerLibs.WinForms.CastControl(System.Object@,System.Object)">
  <summary>
  Aplica um valor a um controle dependendo do seu tipo
  </summary>
- <param name="COntrol">Controle</param>
- <param name="Value"></param>
+ <param name="Control">Controle</param>
+ <param name="Value">Valor</param>
 </member>
 <member name="M:InnerLibs.WinForms.GetQueryableValue(System.Object@)">
  <summary>

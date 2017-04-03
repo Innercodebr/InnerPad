@@ -218,6 +218,10 @@ Public Class HOME
         End If
     End Sub
 
+    Private Sub AJAXConsoleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AJAXConsoleToolStripMenuItem.Click
+        Console.Show(DockPanel1, DockState.DockBottom)
+    End Sub
+
 
 
 

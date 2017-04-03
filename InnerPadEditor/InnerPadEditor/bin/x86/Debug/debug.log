@@ -43,3 +43,51 @@
 [0315/151629:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
 [0315/164927:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
 [0315/165004:ERROR:broker_win.cc(58)] Error reading broker pipe: O pipe foi finalizado. (0x6D)
+[0323/150005:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0323/150024:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150029:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150034:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150040:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150045:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150050:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150055:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150100:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150105:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150110:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150115:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150120:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150125:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150130:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150135:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150140:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150145:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150150:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150155:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150200:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150205:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150210:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150212:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150215:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150217:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150220:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150222:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150225:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150227:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150230:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150232:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150235:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150237:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150240:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150242:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150245:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150247:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150250:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/150252:WARNING:dns_config_service_win.cc(661)] Failed to read DnsConfig.
+[0323/162718:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0323/162729:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0324/094129:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0324/094300:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0324/094357:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0324/095020:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0324/101226:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/
+[0324/101338:INFO:chrome_scheme_handler.cc(536)] Reguest for unknown chrome resource: chrome://innerpad/

@@ -84,5 +84,8 @@
 .ForeColor = Color.Orange
 }.AsImage
 
+    Property DirectoryIcon As Bitmap = New FontAwesome.Properties(FontAwesome.Type.FolderOpen) With {
+.ForeColor = Color.Orange
+}.AsImage
 
 End Module

@@ -27,14 +27,15 @@ Partial Class FileExplorer
         Me.components = New System.ComponentModel.Container()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.commandbox = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'ListView1
         '
         Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ListView1.Location = New System.Drawing.Point(0, 0)
+        Me.ListView1.Location = New System.Drawing.Point(0, 20)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(651, 447)
+        Me.ListView1.Size = New System.Drawing.Size(640, 427)
         Me.ListView1.TabIndex = 0
         Me.ListView1.UseCompatibleStateImageBehavior = False
         '
@@ -44,18 +45,29 @@ Partial Class FileExplorer
         Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
         '
+        'commandbox
+        '
+        Me.commandbox.Dock = System.Windows.Forms.DockStyle.Top
+        Me.commandbox.Location = New System.Drawing.Point(0, 0)
+        Me.commandbox.Name = "commandbox"
+        Me.commandbox.Size = New System.Drawing.Size(640, 20)
+        Me.commandbox.TabIndex = 1
+        '
         'FileExplorer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(651, 447)
+        Me.ClientSize = New System.Drawing.Size(640, 447)
         Me.Controls.Add(Me.ListView1)
+        Me.Controls.Add(Me.commandbox)
         Me.Name = "FileExplorer"
         Me.Text = "FileExplorer"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents ListView1 As ListView
     Friend WithEvents ImageList1 As ImageList
+    Friend WithEvents commandbox As TextBox
 End Class
